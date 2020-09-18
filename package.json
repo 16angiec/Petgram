@@ -4,6 +4,8 @@
   "description": "Proyecto de Petgram",
   "main": "index.js",
   "scripts": {
+    "build": "webpack",
+    "dev": "webpack-dev-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,5 +18,11 @@
   "bugs": {
     "url": "https://github.com/16angiec/React-Avanzado/issues"
   },
-  "homepage": "https://github.com/16angiec/React-Avanzado#readme"
+  "homepage": "https://github.com/16angiec/React-Avanzado#readme",
+  "devDependencies": {
+    "html-webpack-plugin": "^4.4.1",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
 }
