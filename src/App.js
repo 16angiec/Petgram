@@ -1,5 +1,5 @@
 import React from 'react';
-import { GlobalStyle } from './GlobalStyles';
+import { GlobalStyle } from './styles/GlobalStyles';
 import { Logo } from './components/Logo/index';
 import { ListOfCategories } from './components/ListOfCategories';
 import { ListOfPhotoCards } from './components/ListOfPhotoCards';
