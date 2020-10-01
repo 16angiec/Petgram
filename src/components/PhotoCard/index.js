@@ -8,7 +8,6 @@ const DEFAULT_IMAGE = 'https://images.unsplash.com/photo-1494256997604-768d1f608
 
 export const PhotoCard = ({ id, likes = 0, src = DEFAULT_IMAGE }) => {
     const [show, ref] = useNearScreen()
-
     const key = `like-${id}`;
     const [liked, setLiked] = useLocalStorage(key, false)
 
