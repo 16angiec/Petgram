@@ -1,4 +1,5 @@
 import React, { Fragment, useEffect, useRef, useState } from 'react';
+import { Link } from '@reach/router';
 import { useLocalStorage } from '../../hooks/useLocalStorage';
 import { useNearScreen } from '../../hooks/useNearScreen';
 import { ToggleLikeMutation } from '../../container/ToggleLikeMutation';
@@ -16,11 +17,11 @@ export const PhotoCard = ({ id, likes = 0, src = DEFAULT_IMAGE }) => {
         <Article ref={ref}>
             {
                 show && <Fragment>
-                    <a href={`/?detail=${id}`}>
+                    <Link to={`/detail/${id}`}>
                         <ImgWrapper>
                             <Img src={src} />
                         </ImgWrapper>
-                    </a>
+                    </Link>
                     
                     <ToggleLikeMutation>
                         {
