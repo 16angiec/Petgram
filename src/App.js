@@ -3,15 +3,12 @@ import { Router } from '@reach/router'
 import { GlobalStyle } from './styles/GlobalStyles';
 import { Logo } from './components/Logo/index';
 import { NavBar } from './components/NavBar/index';
+import Context from './Context';
 import { Home } from './Pages/Home';
 import { Detail } from './Pages/Detail';
 import { Favs } from './Pages/Favs';
 import { User } from './Pages/User';
 import { NotRegisteredUser } from './Pages/NotRegisteredUser';
-
-const UserLogged = ({ children }) => {
-    return children({ isAuth: false })
-}
 
 export const App = () => {
     return (
@@ -24,7 +21,7 @@ export const App = () => {
                 <Detail path='/detail/:detailId' />
             </Router>
 
-            <UserLogged>
+            <Context.Consumer>
                 {
                     ({ isAuth }) =>
                         isAuth
@@ -37,7 +34,7 @@ export const App = () => {
                                 <NotRegisteredUser path='/user' />
                             </Router>
                 }
-            </UserLogged>
+            </Context.Consumer>
 
             <NavBar />
         </>
