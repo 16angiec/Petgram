@@ -43,7 +43,7 @@ export const NotRegisteredUser = () => {
 
                         const errorMsg = error && 'La contraseña no es correcta o el usuario no existe.'
                         return (
-                            <UserForm disabled={loading} error={errorMsg} title='Iniciar Sesión' onSubmit={activateAuth} />
+                            <UserForm disabled={loading} error={errorMsg} title='Iniciar Sesión' onSubmit={onSubmit} />
                         )
                     }
                 }

@@ -6,10 +6,10 @@ import Context from './Context';
 import { App } from './App';
 
 const client = new ApolloClient({
-    uri: 'https://petgram-backend-one.now.sh/graphql',
+    uri: 'https://petgram-api-test-id60twobf.vercel.app/graphql',
     request: operation => {
         const token = window.sessionStorage.getItem('token')
-        const authorization = token ? `Bearer ${token}` : ''
+        const authorization = token ?  'Bearer ' + token: ''
         operation.setContext({
             headers: {
                 authorization
@@ -23,6 +23,7 @@ const client = new ApolloClient({
             window.location.href = '/'
         }
     }
+    
 })
 
 ReactDOM.render(
@@ -32,3 +33,4 @@ ReactDOM.render(
         </ApolloProvider>
     </Context.Provider>,
     document.getElementById('app'))
+ 
