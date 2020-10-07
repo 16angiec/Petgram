@@ -11,7 +11,7 @@ export const Title = styled.h1`
     padding-bottom: 8px;
 `
 
-export const Subitle = styled.h2`
+export const Subtitle = styled.h2`
     font-size: 16px;
     font-weight: 400;
     color: #333;
