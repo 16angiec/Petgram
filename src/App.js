@@ -3,7 +3,7 @@ import { Redirect, Router } from '@reach/router'
 import { GlobalStyle } from './styles/GlobalStyles';
 import { Logo } from './components/Logo/index';
 import { NavBar } from './components/NavBar/index';
-import Context from './Context';
+import { Context } from './Context';
 import { Home } from './Pages/Home';
 import { Detail } from './Pages/Detail';
 import { Favs } from './Pages/Favs';
