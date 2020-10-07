@@ -1,17 +1,13 @@
-import React, { Fragment} from 'react';
-import { Helmet } from 'react-helmet';
+import React from 'react';
+import { Layout } from '../components/Layout';
 import { ListOfCategories } from '../components/ListOfCategories';
 import { ListOfPhotoCards } from '../container/ListOfPhotoCards';
 
 export const Home = ({ id }) => {
     return (
-        <Fragment>
-            <Helmet>
-                <title>Petgram - Tu app de fotos de mascotas</title>
-                <meta name='description' content='Con petgram puedes encontar fotos de animales domésticos muy bonitos' />
-            </Helmet>
+        <Layout title='Tu app de fotos de mascotas' subtitle='Con petgram puedes encontar fotos de animales domésticos muy bonitos' >
             <ListOfCategories />
             <ListOfPhotoCards categoryId={id} />
-        </Fragment>
+        </Layout>
     )
 }
